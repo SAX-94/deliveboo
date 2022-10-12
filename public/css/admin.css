@@ -1,0 +1,256 @@
+@import './buttons.css';
+@import './dishes.css';
+
+/* MAIN STYLE */
+#app {
+    height: 100vh;
+}
+
+main, nav, .form-control, input::placeholder {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+main {
+    padding: 3rem 0;
+}
+
+/* DELIVEROO LOGO */
+a img {
+    width: 110px;
+}
+
+/* NAV BUTTONS ICONS */
+a i {
+    font-size: .9rem;
+    padding: 0 6px 0 4px;
+    color: #00CCBC;
+    vertical-align: middle;
+}
+
+/* LOGIN FORM */
+h4.admin-form {
+    padding-bottom: .7rem;
+}
+
+label {
+    padding: .5rem 0; 
+}
+
+.form-control {
+    height: 50px;
+}
+
+.forgotten-pw {
+    color: #00CCBC;
+    font-size: .8rem;
+    text-decoration: none;
+    margin: 0;
+    padding: .5rem 0;
+}
+
+.forgotten-pw:hover {
+    color: #00c2b3;
+}
+
+.btn.register-btn, .btn.login-btn {
+    width: 100%;
+    height: 50px;
+    background-color: #00CCBC;
+    color: white;
+}
+
+.btn.register-btn:hover, .btn.login-btn:hover {
+    background-color: #00c2b3 !important;
+    color: white !important;
+}
+
+/* REGISTER */
+.form-control.register, .form-control.edit, .form-control.dish, .form-control.create-dish {
+    box-shadow: 0 0 4px lightgrey inset;
+    border-color: lightgray;
+}
+
+.form-control.register:focus, .form-control.edit:focus, .form-control.dish:focus, .form-control.create-dish:focus {
+    border-color: lightgray;
+    box-shadow: 0 0 0 0.25rem rgb(0 204 188 / 25%);
+}
+
+small>a {
+    text-decoration: none;
+    color: #00ccbc;
+}
+
+small>a:hover {
+    color: #00c2b3;
+}
+
+/* CONTROL PANEL */
+.side-bar {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    padding: 3rem 2rem;
+}
+
+.side-link li {
+    padding-bottom: 1rem;
+}
+
+.side-link li a {
+    color: #2E3333;
+}
+
+.side-link li a:hover {
+    color: #00c2b3;
+}
+
+/* RESTAURANT INDEX */
+.left-side img {
+    height: 200px;
+    opacity: 75%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgray;
+    border: 1px solid lightgray;
+    object-fit: cover;
+}
+
+.right-side h2 {
+    font-weight: bold;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+    background-color: #00CCBC;
+    height: 20px;
+}
+
+.right-side .categories {
+    color: #00c2b3;
+    font-size: .9rem;
+    padding-top: .8rem;
+}
+
+.right-side a i:hover {
+    color: #00c2b3;
+}
+
+/* EDIT */
+h3 b {
+    color: #00CCBC;
+}
+
+button i {
+    color: #00CCBC;
+    margin-right: 10px;
+}
+
+.edit-btn {
+    height: 50px;
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+}
+
+/* DISHES INDEX */
+.dishes-section {
+    padding: 2rem 0;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.dish-card {
+    width: 100%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 4px rgb(224, 224, 224);
+}
+
+.dish-img img {
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    border: 1px solid #F9FAFA;
+    object-fit: cover;
+}
+
+.description {
+    font-size: 0.85rem;
+    line-height: 130%;
+    opacity: 75%;
+    padding: 0.5rem 0 0.7rem 0;
+}
+
+.dish-index {
+    background-color: white;
+    padding: 2rem;
+}
+
+.button-create {
+    width: 400px;
+    padding-bottom: 2rem;
+    margin: auto;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    .button-create {
+        width: 280px;
+    }
+
+    .button-create > .blue-btn {
+        width: 280px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .side-bar {
+        padding: 2rem 1rem;
+    }
+
+    .button-create {
+        width: 200px;
+    }
+
+    .button-create > .blue-btn {
+        width: 200px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .left-side img {
+        height: 150px;
+    }
+
+    .right-side h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .right-side>div>span {
+        font-size: .8rem;
+    }
+
+    .file-upload input, .edit-upload input {
+        font-size: .8rem;
+        width: 80%;
+    }
+
+    .check-availability label {
+        font-size: .8rem;
+    }
+
+    .button-create {
+        width: 150px;
+    }
+
+    .button-create > .blue-btn {
+        width: 150px;
+        margin: auto;
+    }
+}
